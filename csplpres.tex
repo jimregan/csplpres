@@ -311,17 +311,15 @@ It's an Apertium project. 'Nuff said.
 \end{frame}
 
 \begin{frame}{Why not SMT?}
-Data sparseness:
+\begin{description}
+  \item[Data sparseness] \hfill \\
+  Compounded by relatively large amount of morphological forms.
+  \item[Lack of truly parallel text] \hfill \\
+  Most parallel text are mutual translations.
+  \item[Lack of true corpora] \hfill \\
+  JRC Acquis is not a corpus.
+\end{description}
 
-Compounded by relatively large amount of morphological forms.
-
-Lack of truly parallel text:
-
-Most parallel text are mutual translations.
-
-Lack of true corpora:
-
-JRC Acquis is not a corpus.
 \end{frame}
 
 \begin{frame}{Aside: JRC Acquis is not a corpus}
@@ -342,7 +340,7 @@ JRC Acquis is:
 
 \begin{itemize}
 \item a dump of raw text
-\item full of encoding errors (at least, for Polish and Czech)
+\item full of encoding errors\footnote{At least, for Polish and Czech. YMMV.}
 \item not reliably sentence aligned: industry practice is to realign
 \item not annotated
 \item not maintained
