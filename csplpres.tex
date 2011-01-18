@@ -507,14 +507,22 @@ pairs, we can observe that Google translate:
   (compare with Spanish: missing diacritics provide a different translation)
   \item[Uses English as a pivot] \hfill \\
   {\it Jsem} in Czech translates as the English {\it I}, instead of Polish {\it Jestem}
+  \item[Uses ``Stemming''] \hfill \\
+  Manually stemmed sentences translate the same as unstemmed.
+\end{description}
+
+\end{frame}
+\begin{frame}{Why not SMT: Google Translate}
+\begin{description}
   \item[Uses unchecked online wordlists] \hfill \\
   Google Dictionary for English-Polish and English-Czech contains many entries from
   online wordlists, known generally to be poor quality (Ectaco). Czech to Polish in Google
   Translate produces several curious translations that could be explained by the
   triangulation of these lists.
-  \item[Uses ``Stemming''] \hfill \\
-  Manually stemmed sentences translate the same as unstemmed.
 \end{description}
+
+Google Translate's use of poor quality wordlists in particular convinced us 
+of the importance of not trusting our sources.
 
 \end{frame}
 
