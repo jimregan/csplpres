@@ -480,7 +480,41 @@ Unfortunately, BibTeX does not allow:
 
 We found nothing in the literature about PBMT between Slavic languages.
 
-Google Translate 
+Of closest relevance was work on Czech to English SMT, which typically
+uses ``stems'' (the first 4 characters of a word) of Czech words, to
+overcome the problem of morphological complexity.
+
+Though this reduces data sparseness, it loses case information, as
+well as person information in verbs. 
+
+This may be adequate for English, but Polish requires that information.
+\end{frame}
+
+\begin{frame}{Why not SMT: Google Translate}
+
+Google Translate is the only online Czech to Polish PBMT system we found
+
+It is also the only online MT system we found of any kind.
+
+\end{frame}
+\begin{frame}{Why not SMT: Google Translate}
+Although few details are available generally, and none for particular language
+pairs, we can observe that Google translate:
+
+\begin{description}
+  \item[Strips diacritics] \hfill \\
+  The presence or absence makes no difference to the translation for Polish and Czech
+  (compare with Spanish: missing diacritics provide a different translation)
+  \item[Uses English as a pivot] \hfill \\
+  {\it Jsem} in Czech translates as the English {\it I}, instead of Polish {\it Jestem}
+  \item[Uses unchecked online wordlists] \hfill \\
+  Google Dictionary for English-Polish and English-Czech contains many entries from
+  online wordlists, known generally to be poor quality (Ectaco). Czech to Polish in Google
+  Translate produces several curious translations that could be explained by the
+  triangulation of these lists.
+  \item[Uses ``Stemming''] \hfill \\
+  Manually stemmed sentences translate the same as unstemmed.
+\end{description}
 
 \end{frame}
 
