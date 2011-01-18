@@ -669,12 +669,86 @@ This gives us an (almost) 1:1 correspondence between suffix $+$ flags in
 \end{table}
 \end{frame}
 
+\begin{frame}{Resources: Bilingual}
+
+We collected our own bilingual text for testing purposes. (The open content
+portion of this collection has been donated to the Open Content Text Corpus
+project).
+
+\end{frame}
+
 \begin{frame}{Resources: Other}
 We also had a set of rules for Slovakian to Polish and Polish to Slovakian.
 
 As Slovakian and Czech have almost identical syntax, these rules only needed
 slight modifications to apply to Czech, though the ruleset was far from 
 complete. 
+\end{frame}
+
+\begin{frame}{Morphological Analysis and Generation}
+Most of the sources we had were suitable for analysis, but not for generation.
+
+In addition, in the English-Polish project, we faced the problem of the large
+number of paradigms required for Polish. This made it difficult to edit, and
+to fix errors.
+
+At the beginning of this project, we decided to abstract the common portions 
+of the paradigms to both reduce the size of the files, and to make it easier
+to keep consistency in the event of modification.
+\end{frame}
+\begin{frame}{Paradigms: Before}
+\begin{figure*}
+\begin{small}
+\begin{verbatim}
+<pardef n="mat/ka__n">
+  <e><p><l>ka</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e><p><l>ki</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="gen"/></r></p></e>
+  <e><p><l>ce</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="dat"/></r></p></e>
+  <e><p><l>kę</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e><p><l>ką</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="ins"/></r></p></e>
+  <e><p><l>ce</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="loc"/></r></p></e>
+  <e><p><l>ko</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="voc"/></r></p></e>
+</pardef>
+<pardef n="dro/ga__n">
+  <e><p><l>ga</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e><p><l>gi</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="gen"/></r></p></e>
+  <e><p><l>dze</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="dat"/></r></p></e>
+  <e><p><l>gę</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e><p><l>gą</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="ins"/></r></p></e>
+  <e><p><l>dze</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="loc"/></r></p></e>
+  <e><p><l>go</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="voc"/></r></p></e>
+</pardef>
+\end{verbatim}
+\end{small}
+\caption{Before: two paradigms with slight differences}
+\end{figure*}
+
+\end{frame}
+\begin{frame}{Paradigms: Before}
+\begin{figure*}
+\begin{small}
+\begin{verbatim}
+<pardef n="BASE__matka">
+  <e><p><l>a</l><r><s n="f"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e><p><l>i</l><r><s n="f"/><s n="sg"/><s n="gen"/></r></p></e>
+  <e><p><l>ę</l><r><s n="f"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e><p><l>ą</l><r><s n="f"/><s n="sg"/><s n="ins"/></r></p></e>
+  <e><p><l>o</l><r><s n="f"/><s n="sg"/><s n="voc"/></r></p></e>
+</pardef>
+<pardef n="mat/ka__n">
+  <e><p><l>k</l><r>ka<s n="n"/></r></p><par n="BASE__matka"/></e>
+  <e><p><l>ce</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="dat"/></r></p></e>
+  <e><p><l>ce</l><r>ka<s n="n"/><s n="f"/><s n="sg"/><s n="loc"/></r></p></e>
+</pardef>
+<pardef n="dro/ga__n">
+  <e><p><l>g</l><r>ga<s n="n"/></r></p><par n="BASE__matka"/></e>
+  <e><p><l>dze</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="dat"/></r></p></e>
+  <e><p><l>dze</l><r>ga<s n="n"/><s n="f"/><s n="sg"/><s n="loc"/></r></p></e>
+</pardef>
+\end{verbatim}
+\end{small}
+\caption{Those paradigms redefined in terms of a common base}
+\end{figure*}
 \end{frame}
 
 \end{section}
