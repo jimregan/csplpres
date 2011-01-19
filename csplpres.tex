@@ -796,6 +796,25 @@ translation for minority languages'' at LREC 2006, Genoa, Italy,
 May 2006, pp103-107.} of cognate induction using lexicons created
 by triangulation (using \texttt{apertium-crossdics}). 
 \end{frame}
+
+\begin{frame}{Bilingual Lexicon: Wikilinks}
+We used Fran's Wikipedia interwiki link extraction, with mixed results.
+
+Toponyms were almost perfect; regular nouns were hit and miss (more 
+miss than hit).
+
+We got better results by {\bf not} following redirects, as doing so lead
+to too many wordpairs that were related, but not translations. (A simple
+filter based on the presence of animacy on only one side was enough to
+find problematic masculine nouns, but this is not sufficiently general).
+
+Our intuition is that the size of the target Wikipedia 
+(Polish\footnote{At the time of writing, the 5th largest Wikipedia}) is part
+of the problem: as Wikipedias grow in size, articles tend to ``group'':
+single line descriptions of related articles are changed into redirects
+to a single, more comprehensive article.
+\end{frame}
+
 \end{section}
 
 \end{document}
