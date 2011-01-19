@@ -591,8 +591,8 @@ pairs, we can observe that Google translate:
   \item[Uses ``Stemming''] \hfill \\
   Manually stemmed sentences translate the same as unstemmed.
 \end{description}
-
 \end{frame}
+
 \begin{frame}{Why not SMT: Google Translate}
 \begin{description}
   \item[Uses unchecked online wordlists] \hfill \\
@@ -608,7 +608,6 @@ Google Translate's use of poor quality wordlists in particular convinced us
 of the importance of not trusting our sources.
 \end{frame}
 
-\end{frame}
 \begin{frame}{Why not SMT: Google Translate}
 
 On the bright side:
@@ -773,7 +772,7 @@ to keep consistency in the event of modification.
 We used several methods for cognate induction, including a modified version of
 the method used in creating the Swedish to Danish translator (we needed to use
 more than single letter substitutions to account for Czech \textit{\v{c}, \v{s}, 
-\v{r}} to Polish \textit{cz, sz, rz}.
+\v{r}} to Polish \textit{cz, sz, rz}).
 
 We found the results to be less promising than in sv-da, which we attribute
 to the historical divergence in lexicons.
@@ -785,6 +784,18 @@ Lexicon from Monolingual Corpora}, \textit{Philipp Koehn and Kevin Knight}, ACL
 2002, Workshop on Unsupervised Lexical Acquisition}
 \end{frame}
 
+\begin{frame}{Bilingual Lexicon: Wordlists}
+There are relatively few Czech--Polish wordlists available, and most 
+are relatively low quality. 
+
+There are many more wordlists for Czech--English and Polish--English. We 
+were used Scannell's method\footnote{\textbf{Machine translation 
+for closely related language pairs}, \textit{Kevin P. Scannell},
+Proceedings of the Workshop ``Strategies for developing machine 
+translation for minority languages'' at LREC 2006, Genoa, Italy, 
+May 2006, pp103-107.} of cognate induction using lexicons created
+by triangulation by \texttt{apertium-crossdics}. 
+\end{frame}
 \end{section}
 
 \end{document}
