@@ -769,6 +769,22 @@ to keep consistency in the event of modification.
 \end{figure}
 \end{frame}
 
+\begin{frame}{Bilingual Lexicon: Cognates}
+We used several methods for cognate induction, including a modified version of
+the method used in creating the Swedish to Danish translator (we needed to use
+more than single letter substitutions to account for Czech \textit{\v{c}, \v{s}, 
+\v{r}} to Polish \textit{cz, sz, rz}.
+
+We found the results to be less promising than in sv-da, which we attribute
+to the historical divergence in lexicons.
+
+We found that by restraining the cognates by suffix to words of the same origin,
+or derived through pan-Slavic processes, we greatly increased the accuracy of
+induced cognates.\footnote{Basically the same as \textbf{Learning a Translation 
+Lexicon from Monolingual Corpora}, \textit{Philipp Koehn and Kevin Knight}, ACL 
+2002, Workshop on Unsupervised Lexical Acquisition}
+\end{frame}
+
 \end{section}
 
 \end{document}
