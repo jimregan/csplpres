@@ -867,6 +867,137 @@ also stipulated a minimum set of translation choices of 3,
 to avoid the possibility that one wordlist contained a subset 
 of another.
 \end{frame}
+\end{section}
+\begin{section}{Evaluation}
+\begin{frame}{Some Numbers}
+\pause
+1 Million and 1 \\
+Sixty-six \\
+1 Billion, twenty-five, seventy-five thousand \\
+1 Billion and eight, six, something \\
+Zero \\
+1 Million 1 \\
+Twenty-two \\
+Seventy-five \\
+Eleven \\
+Eleven
+
+Ok this is the new order
+
+The New Number Order
+
+\footnotesize{\textbf{Shellac}, \textit{New Number Order}}
+
+\pause
+
+\footnotesize{Coverage of the analyser is utterly irrelevant to translation, but
+I include the numbers to appease a certain dreadlocked morphological analysis
+fanatic.}
+
+\end{frame}
+\begin{frame}{Some Numbers: Naive Coverage}
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Corpus & Running tokens & Known tokens & Coverage \\
+\hline
+Polish  & 39,293,427 & 27,997,757 & 71.25\%\\
+Czech   & 17,165,777 & 10,925,926 & 63.65\%\\
+\hline
+\end{tabular}
+    \caption{Naïve coverage for both translation directions}
+    \label{table:coverage}
+\end{table}
+\end{frame}
+
+\begin{frame}{Evaluation}
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Corpus    & WER & PWER & Free rides & Unknowns\\
+\hline
+News Samples & 71 \% & 60 \%  & 5 \%  & 28 \% \\
+UDHR & 88 \% & 68 \%  & 0 \%  & 22 \% \\
+\hline
+\end{tabular}
+    \caption{Evaluation results, apertium-pl-cs.}
+    \label{table:quanteval}
+\end{table}
+
+\pause
+
+You remember that I said it sucks? 71\% is awful.
+\end{frame}
+
+\begin{frame}{Evaluation: Google Translate}
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+Corpus    & WER & PWER \\
+\hline
+News Samples & 76 \% & 62 \%  \\
+UDHR & 47 \% & 32 \% \\
+\hline
+\end{tabular}
+    \caption{Evaluation results for Google Translate.}
+    \label{table:googlecompar}
+\end{table}
+
+\pause
+
+...but at least it's better than Google Translate, for text known not to
+have been part of Google Translate's training set.
+
+\end{frame}
+
+\begin{frame}{Disambiguation}
+The main problem is that of disambiguation.
+
+PoS tagging is not a difficult problem, though traditional Czech taggers follow 
+the traditional model, which (in our opinion, artificially) discounts most
+PoS ambiguities.
+
+MSD is the biggest problem. Mea culpa, in the paper I didn't properly distinguish
+between tagging and MSD. 
+\end{frame}
+\begin{frame}{Disambiguation}
+Rule Based Machine Translation: It doesn't work, but we know why.
+\end{frame}
+\begin{frame}{Disambiguation: Cascades of failure}
+
+Poor disambiguation is the root of most errors:
+
+\begin{itemize}
+\item Direct source of errors
+\item Leads to chunking errors
+\item Leads to chunk agreement errors
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What's Missing?}
+
+\begin{itemize}
+\item Fine grained disambiguation
+\item Look ahead in chunking (partly done)
+\item Multiword units with multiply inflected items
+\end{itemize}
+
+\end{frame}
+\begin{frame}{Deliberately Abrupt Ending}
+I really have to shut up... I could talk about this forever.
+
+Questions?
+\end{frame}
+\begin{frame}{One Last Thing...}
+Joanna could not join us, as she recently started a new job.
+
+Her work on this project contributed to her successful job application;
+I hope you'll join me in congratulating her.
+\end{frame}
 
 \end{section}
 
